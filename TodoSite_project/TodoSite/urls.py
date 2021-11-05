@@ -19,7 +19,6 @@ from todo import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.home, name='home'),
 
     # Auth
     path('signup/', views.signupuser, name='signupuser'),
@@ -27,5 +26,7 @@ urlpatterns = [
     path('logout/', views.logoutuser, name='logoutuser'),
 
     # Todos
-    path('current/', views.correnttodos, name='correnttodos')
+    path('',views.home, name='home'),
+    path('current/', views.currenttodos, name='currenttodos'),
+    path('createtodo/', views.createtodo, name='createtodo')
 ]
